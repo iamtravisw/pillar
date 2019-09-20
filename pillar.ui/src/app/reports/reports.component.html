@@ -1,0 +1,85 @@
+<app-navbar></app-navbar>
+<br>
+<div class="container is-fluid">
+    <article class="media">
+        <app-sidebar></app-sidebar>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+        <div class="container is-fluid">
+            
+            <div *ngIf="router.url === '/reports/status'; else Customer">
+                <div class="tabs is-toggle is-fullwidth">
+                    <ul>
+                        <li class="is-active" routerLink="/reports/status">
+                            <a>
+                                <span>Tickets by Status</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="/reports/customer">
+                                <span>Tickets by Customer</span>
+                            </a>
+                        </li>
+                        <li routerLink="/reports/table">
+                            <a>
+                                <span>Tickets by Table</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <ng-template #Customer>
+                <div *ngIf="router.url === '/reports/customer'; else Table">
+                    <div class="tabs is-toggle is-fullwidth">
+                        <ul>
+                            <li routerLink="/reports/status">
+                                <a>
+                                    <span>Tickets by Status</span>
+                                </a>
+                            </li>
+                            <li class="is-active">
+                                <a routerLink="/reports/customer">
+                                    <span>Tickets by Customer</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <li routerLink="/reports/table">
+                            <a>
+                                <span>Tickets by Table</span>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+            </ng-template>
+
+            <ng-template #Table>
+                    <div *ngIf="router.url === '/reports/table'">
+                        <div class="tabs is-toggle is-fullwidth">
+                            <ul>
+                                <li routerLink="/reports/status">
+                                    <a>
+                                        <span>Tickets by Status</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a routerLink="/reports/customer">
+                                        <span>Tickets by Customer</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <li class="is-active" routerLink="/reports/table">
+                                <a>
+                                    <span>Tickets by Table</span>
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+                </ng-template>
+
+            <router-outlet></router-outlet>
+            <br>
+        </div>
+    </article>
+</div>
+<app-footer></app-footer>

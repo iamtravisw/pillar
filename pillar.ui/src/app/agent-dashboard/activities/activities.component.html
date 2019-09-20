@@ -1,0 +1,162 @@
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<div *ngFor="let ticket of ticketResults">
+
+    <div *ngIf="ticket.status === 'New'; else Open">
+        <div *ngIf="ticket.subject?.length > 74 ; else FullSubject">
+                <a href="#" routerLink="/tickets/{{ticket.ticketId}}">
+            <article class="message is-warning">
+                <div class="message-body">
+                    <strong>{{ticket.status}}: {{ticket.subject | slice:0:75}}...</strong> <small><strong>
+                            <p class="is-pulled-right">{{ticket.user.requester}} @ {{ticket.user.organization}}</p><br>
+                                <p class="is-pulled-right">    ({{ticket.openDate | date: 'dd/MM/yyyy HH:mm'}})</p>
+                        </strong></small> <br>
+                    <div *ngIf="ticket.description?.length > 424 ; else FullDetails">
+                        {{ticket.description | slice:0:425}}...
+                    </div>
+                    <ng-template #FullDetails>
+                        {{ticket.description}}
+                    </ng-template>
+                    &nbsp;
+                </div>
+            </article>
+                </a>
+            <br>
+        </div>
+        <ng-template #FullSubject>
+            <a href="#" routerLink="/tickets/{{ticket.ticketId}}">
+            <article class="message is-warning">
+                <div class="message-body">
+                    <strong>{{ticket.status}}: {{ticket.subject}}</strong> <small><strong>
+                            <p class="is-pulled-right">{{ticket.user.requester}} @ {{ticket.user.organization}}</p><br>
+                                <p class="is-pulled-right">    ({{ticket.openDate | date: 'dd/MM/yyyy HH:mm'}})</p>
+                        </strong></small> <br>
+                    {{ticket.description}}
+                    <br>
+                </div>
+            </article>
+            &nbsp;
+        </a>
+        </ng-template>
+    </div>
+
+    <ng-template #Open>
+        <div *ngIf="ticket.status === 'Open'; else Pending">
+            <div *ngIf="ticket.subject?.length > 74 ; else FullSubject">
+                    <a href="#" routerLink="/tickets/{{ticket.ticketId}}">
+                <article class="message is-danger">
+                    <div class="message-body">
+                        <strong>{{ticket.status}}: {{ticket.subject | slice:0:75}}...</strong> <small><strong>
+                                <p class="is-pulled-right">{{ticket.user.requester}} @ {{ticket.user.organization}}</p><br>
+                                <p class="is-pulled-right">    ({{ticket.openDate | date: 'dd/MM/yyyy HH:mm'}})</p>
+                            </strong></small> <br>
+                        <div *ngIf="ticket.description?.length > 424 ; else FullDetails">
+                            {{ticket.description | slice:0:425}}...
+                        </div>
+                        <ng-template #FullDetails>
+                            {{ticket.description}}
+                        </ng-template>
+                    </div>
+                </article>
+                </a>    
+                &nbsp;
+            </div>
+
+            <ng-template #FullSubject>
+                    <a href="#" routerLink="/tickets/{{ticket.ticketId}}">
+                <article class="message is-danger">
+                    <div class="message-body">
+                        <strong>{{ticket.status}}: {{ticket.subject}}</strong> <small><strong>
+                                <p class="is-pulled-right">{{ticket.user.requester}} @ {{ticket.user.organization}}</p><br>
+                                <p class="is-pulled-right">    ({{ticket.openDate | date: 'dd/MM/yyyy HH:mm'}})</p>
+                            </strong></small> <br>
+                        {{ticket.description}}
+                    </div>
+                </article>
+                </a>
+                &nbsp;
+            </ng-template>
+        </div>
+    </ng-template>
+
+    <ng-template #Pending>
+        <div *ngIf="ticket.status === 'Pending'; else Solved">
+            <div *ngIf="ticket.subject?.length > 74 ; else FullSubject">
+                    <a href="#" routerLink="/tickets/{{ticket.ticketId}}">
+                <article class="message is-info">
+                    <div class="message-body">
+                        <strong>{{ticket.status}}: {{ticket.subject | slice:0:75}}...</strong> <small><strong>
+                                <p class="is-pulled-right">{{ticket.user.requester}} @ {{ticket.user.organization}}</p><br>
+                                <p class="is-pulled-right">    ({{ticket.openDate | date: 'dd/MM/yyyy HH:mm'}})</p>
+                            </strong></small> <br>
+                        <div *ngIf="ticket.description?.length > 424 ; else FullDetails">
+                            {{ticket.description | slice:0:425}}...
+                        </div>
+                        <ng-template #FullDetails>
+                            {{ticket.description}}
+                        </ng-template>
+                        <br>
+                    </div>
+                </article>
+                </a>
+                &nbsp;
+            </div>
+
+            <ng-template #FullSubject>
+                    <a href="#" routerLink="/tickets/{{ticket.ticketId}}">
+                <article class="message is-info">
+                    <div class="message-body">
+                        <strong>{{ticket.status}}: {{ticket.subject}}</strong> <small><strong>
+                                <p class="is-pulled-right">{{ticket.user.requester}} @ {{ticket.user.organization}}</p><br>
+                                <p class="is-pulled-right">    ({{ticket.openDate | date: 'dd/MM/yyyy HH:mm'}})</p>
+                            </strong></small> <br>
+                        {{ticket.description}}
+                        <br>
+                    </div>
+                </article>
+                </a>
+                &nbsp;
+            </ng-template>
+        </div>
+    </ng-template>
+
+    <ng-template #Solved>
+        <div *ngIf="ticket.status === 'Solved'">
+            <div *ngIf="ticket.subject?.length > 74 ; else FullSubject">
+                    <a href="#" routerLink="/tickets/{{ticket.ticketId}}">
+                <article class="message is-success">
+                    <div class="message-body">
+                        <strong>{{ticket.status}}: {{ticket.subject | slice:0:75}}...</strong> <small><strong>
+                                <p class="is-pulled-right">{{ticket.user.requester}} @ {{ticket.user.organization}}</p><br>
+                                <p class="is-pulled-right">    ({{ticket.openDate | date: 'dd/MM/yyyy HH:mm'}})</p>
+                            </strong></small> <br><br>
+                        <div *ngIf="ticket.description?.length > 424 ; else FullDetails">
+                            {{ticket.description | slice:0:425}}...
+                        </div>
+                        <ng-template #FullDetails>
+                            {{ticket.description}}
+                        </ng-template>
+                        <br>
+                    </div>
+                </article>
+                </a>
+                &nbsp;
+            </div>
+
+            <ng-template #FullSubject>
+                    <a href="#" routerLink="/tickets/{{ticket.ticketId}}">
+                <article class="message is-success">
+                    <div class="message-body">
+                        <strong>{{ticket.status}}: {{ticket.subject}}</strong> <small><strong>
+                                <p class="is-pulled-right">{{ticket.user.requester}} @ {{ticket.user.organization}}</p><br>
+                                <p class="is-pulled-right">    ({{ticket.openDate | date: 'dd/MM/yyyy HH:mm'}})</p>
+                            </strong></small> <br>
+                        {{ticket.description}}
+                        <br>
+                    </div>
+                </article>
+                </a>
+                &nbsp;
+            </ng-template>
+        </div>
+    </ng-template>
+</div>

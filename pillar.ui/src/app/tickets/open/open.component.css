@@ -1,0 +1,6 @@
+.message {
+    transition: transform .2s; 
+  }
+  .message:hover {
+    transform: scale(1.025); 
+  }

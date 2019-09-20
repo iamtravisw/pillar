@@ -1,0 +1,55 @@
+<nav class="navbar has-background-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <ng-container *ngIf="admin==='Y'">
+      <a class="navbar-item has-text-link has-text-weight-bold is-size-3" routerLink="/dashboard">
+        <a>Pillar</a>
+      </a>
+    </ng-container>
+    <ng-container *ngIf="admin!='Y'">
+      <a class="navbar-item has-text-link has-text-weight-bold is-size-3" routerLink="/user-dashboard/new">
+        <a>Pillar</a>
+      </a>
+    </ng-container>
+  </div>
+  <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </a>
+  <div id="navbar" class="navbar-menu">
+    <div class="navbar-start">
+      <ng-container *ngIf="admin==='Y'">
+        <a class="navbar-item" routerLink="/dashboard">Home</a>
+      </ng-container>
+      <ng-container *ngIf="admin!='Y'">
+        <a class="navbar-item " routerLink="/user-dashboard/new">Home</a>
+      </ng-container>
+      <a class="navbar-item" href="https://localhost:5001/swagger/index.html" target="_blank">
+        API
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" routerLink="/more/documentation">
+            Documentation
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item" routerLink="/more/version">
+            Version
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-link" (click)="onLogout()">
+            <strong>Log Out</strong>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

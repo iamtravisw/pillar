@@ -1,0 +1,157 @@
+<div *ngIf="router.url === '/dashboard'; else New">
+  <aside class="menu">
+    <p class="menu-label">General</p>
+    <ul class="menu-list">
+      <li><a routerLink="/dashboard" class="is-active">Dashboard</a></li>
+          </ul>
+    <p class="menu-label">Tickets</p>
+    <ul class="menu-list">
+      <li><a routerLink="/tickets/new">New</a></li>
+      <li><a routerLink="/tickets/pending">Pending</a></li>
+      <li><a routerLink="/tickets/open">Open</a></li>
+      <li><a routerLink="/tickets/solved">Solved</a></li>
+    </ul>
+    <p class="menu-label">Administration</p>
+    <ul class="menu-list">
+      <li><a routerLink="/reports/status">Reports</a></li>
+          
+    </ul>
+  </aside>
+</div>
+
+<ng-template #New>
+  <div *ngIf="router.url === '/tickets/new'; else Pending">
+    <aside class="menu">
+        <p class="menu-label">General</p>
+        <ul class="menu-list">
+          <li><a routerLink="/dashboard">Dashboard</a></li>
+                  </ul>
+        <p class="menu-label">Tickets</p>
+        <ul class="menu-list">
+          <li><a class="is-active" routerLink="/tickets/new">New</a></li>
+          <li><a routerLink="/tickets/pending">Pending</a></li>
+          <li><a routerLink="/tickets/open">Open</a></li>
+          <li><a routerLink="/tickets/solved">Solved</a></li>
+        </ul>
+        <p class="menu-label">Administration</p>
+        <ul class="menu-list">
+          <li><a routerLink="/reports/status">Reports</a></li>
+              
+        </ul>
+      </aside>
+  </div>
+</ng-template>
+
+<ng-template #Pending>
+    <div *ngIf="router.url === '/tickets/pending'; else Open">
+      <aside class="menu">
+          <p class="menu-label">General</p>
+          <ul class="menu-list">
+            <li><a routerLink="/dashboard">Dashboard</a></li>
+                      </ul>
+          <p class="menu-label">Tickets</p>
+          <ul class="menu-list">
+            <li><a routerLink="/tickets/new">New</a></li>
+            <li><a class="is-active" routerLink="/tickets/pending">Pending</a></li>
+            <li><a routerLink="/tickets/open">Open</a></li>
+            <li><a routerLink="/tickets/solved">Solved</a></li>
+          </ul>
+          <p class="menu-label">Administration</p>
+          <ul class="menu-list">
+            <li><a routerLink="/reports/status">Reports</a></li>
+                
+          </ul>
+        </aside>
+    </div>
+  </ng-template>
+
+  <ng-template #Open>
+      <div *ngIf="router.url === '/tickets/open'; else Solved">
+        <aside class="menu">
+            <p class="menu-label">General</p>
+            <ul class="menu-list">
+              <li><a routerLink="/dashboard">Dashboard</a></li>
+                          </ul>
+            <p class="menu-label">Tickets</p>
+            <ul class="menu-list">
+              <li><a routerLink="/tickets/new">New</a></li>
+              <li><a routerLink="/tickets/pending">Pending</a></li>
+              <li><a class="is-active" routerLink="/tickets/open">Open</a></li>
+              <li><a routerLink="/tickets/solved">Solved</a></li>
+            </ul>
+            <p class="menu-label">Administration</p>
+            <ul class="menu-list">
+              <li><a routerLink="/reports/status">Reports</a></li>
+                  
+            </ul>
+          </aside>
+      </div>
+    </ng-template>
+
+    <ng-template #Solved>
+        <div *ngIf="router.url === '/tickets/solved'; else Reports">
+          <aside class="menu">
+              <p class="menu-label">General</p>
+              <ul class="menu-list">
+                <li><a routerLink="/dashboard">Dashboard</a></li>
+                              </ul>
+              <p class="menu-label">Tickets</p>
+              <ul class="menu-list">
+                <li><a routerLink="/tickets/new">New</a></li>
+                <li><a routerLink="/tickets/pending">Pending</a></li>
+                <li><a routerLink="/tickets/open">Open</a></li>
+                <li><a class="is-active" routerLink="/tickets/solved">Solved</a></li>
+              </ul>
+              <p class="menu-label">Administration</p>
+              <ul class="menu-list">
+                <li><a routerLink="/reports/status">Reports</a></li>
+                    
+              </ul>
+            </aside>
+        </div>
+      </ng-template>
+
+      <ng-template #Reports>
+          <div *ngIf="router.url.startsWith('/reports/') ; else Other">
+            <aside class="menu">
+                <p class="menu-label">General</p>
+                <ul class="menu-list">
+                  <li><a routerLink="/dashboard">Dashboard</a></li>
+                                  </ul>
+                <p class="menu-label">Tickets</p>
+                <ul class="menu-list">
+                  <li><a routerLink="/tickets/new">New</a></li>
+                  <li><a routerLink="/tickets/pending">Pending</a></li>
+                  <li><a routerLink="/tickets/open">Open</a></li>
+                  <li><a routerLink="/tickets/solved">Solved</a></li>
+                </ul>
+                <p class="menu-label">Administration</p>
+                <ul class="menu-list">
+                  <li><a class="is-active" routerLink="/admin/reports">Reports</a></li>
+                      
+                </ul>
+              </aside>
+          </div>
+        </ng-template>
+
+            <ng-template #Other>
+                  <aside class="menu">
+                      <p class="menu-label">General</p>
+                      <ul class="menu-list">
+                        <li><a routerLink="/dashboard">Dashboard</a></li>
+                                              </ul>
+                      <p class="menu-label">Tickets</p>
+                      <ul class="menu-list">
+                        <li><a routerLink="/tickets/new">New</a></li>
+                        <li><a routerLink="/tickets/pending">Pending</a></li>
+                        <li><a routerLink="/tickets/open">Open</a></li>
+                        <li><a routerLink="/tickets/solved">Solved</a></li>
+                      </ul>
+                      <p class="menu-label">Administration</p>
+                      <ul class="menu-list">
+                        <li><a routerLink="/reports/status">Reports</a></li>
+                            
+                      </ul>
+                    </aside>
+              </ng-template>
+              <br>

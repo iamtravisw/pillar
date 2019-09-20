@@ -1,0 +1,75 @@
+<article class="message is-warning">
+    <div class="message-body">
+        <strong>Attention</strong>:<br>
+        You are about to create a new ticket. If you are looking for an existing ticket, please use the
+        'Opened Tickets' or 'Closed Tickets' links on the navigation.
+    </div>
+</article>
+
+
+<form [formGroup]="service.createTicketFormModel" autocomplete="off" (submit)="onSubmit()">
+<div class="form-group">
+<div class="field">
+    <label class="label">Subject</label>
+    <label class="help is-danger" *ngIf="service.createTicketFormModel.get('subject').touched && service.createTicketFormModel.get('subject').errors?.required">The Subject is required</label>
+    <div class="control">
+        <input class="input" type="text" formControlName="subject" id="subject" placeholder="A title for the problem">
+    </div>
+</div>
+</div>
+
+<br>
+
+<div class="form-group">
+    <p class="is-pulled-left">&nbsp;</p>
+    <div class="field is-pulled-left">
+        <label class="label">Priority:</label>
+        <label class="help is-danger" *ngIf="service.createTicketFormModel.get('priority').touched && service.createTicketFormModel.get('priority').errors?.required">The Priority is required</label>
+        <div class="control">
+            <div class="select">
+                <select id="priority" formControlName="priority">
+                    <option value="Low">Low</option>
+                    <option value="Normal">Normal</option>
+                    <option value="High">High</option>
+                    <option value="Urgent">Urgent</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <p class="is-pulled-left">&nbsp;</p>
+    <div class="field is-pulled-left">
+        <label class="label">Type:</label>
+        <label class="help is-danger" *ngIf="service.createTicketFormModel.get('type').touched && service.createTicketFormModel.get('type').errors?.required">The Type is required</label>
+        <div class="control">
+            <div class="select">
+                <select id="type" formControlName="type">
+                    <option value="Question">Question</option>
+                    <option value="Problem">Problem</option>
+                    <option value="Task">Task</option>
+                    <option value="Incident">Incident</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br>
+<br>
+
+<div class="form-group">
+<div class="field">
+    <label class="label">Message</label>
+    <label class="help is-danger" *ngIf="service.createTicketFormModel.get('description').touched && service.createTicketFormModel.get('description').errors?.required">The Message is required</label>
+    <div class="control">
+        <textarea class="textarea" formControlName="description" id="description" placeholder="A detailed description of the problem."></textarea>
+    </div>
+</div>
+</div>
+<br>
+
+<button type="submit" class="button is-link">Submit</button>
+<p class="is-pulled-right">&nbsp;</p>
+<br><br>
+</form>

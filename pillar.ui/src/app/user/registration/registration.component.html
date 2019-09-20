@@ -1,0 +1,45 @@
+  <div id="login">
+        <div class="login-card">
+      
+          <div class="card-title">
+            <h1>Register</h1>
+          </div>
+      
+          <div class="content">
+            <form [formGroup]="service.registerFormModel" autocomplete="off" (submit)="onSubmit()">
+
+
+                <div class="form-group">
+                    <label class="help is-danger" *ngIf="service.registerFormModel.get('userName').touched && service.registerFormModel.get('userName').errors?.required">The username is required</label>
+                    <input class="form-control" formControlName="userName" id="email" type="text" placeholder="Username" required autofocus> 
+                </div>
+
+                <div class="form-group">
+                    <label class="help is-danger" *ngIf="service.registerFormModel.get('password').touched && service.registerFormModel.get('password').errors?.required">The password is required</label>
+                    <label class="help is-danger" *ngIf="service.registerFormModel.get('password').touched && service.registerFormModel.get('password').errors?.minlength">Password must be at least 4 characters in length</label>
+                    <input class="form-control" formControlName="password" id="password" type="password" placeholder="Password" required>
+                </div>               
+
+                <div class="form-group">
+                    <label class="help is-danger" *ngIf="service.registerFormModel.get('organization').touched && service.registerFormModel.get('organization').errors?.required">The organization is required</label>
+                    <input class="form-control" formControlName="organization" id="email" type="text" placeholder="Organization" required autofocus>
+                </div>
+
+                <div class="form-group">
+                    <label class="help is-danger" *ngIf="service.registerFormModel.get('requester').touched && service.registerFormModel.get('requester').errors?.required">The name is required</label>
+                    <input class="form-control" formControlName="requester" id="email" type="text" placeholder="Name" required autofocus>
+                </div>
+
+                <div class="form-group">
+                    <label class="help is-danger" *ngIf="service.registerFormModel.get('title').touched && service.registerFormModel.get('title').errors?.required">The title is required</label>
+                    <input class="form-control" formControlName="title" id="email" type="text" name="title" title="title" placeholder="Title" required autofocus>
+                </div>
+
+              <button type="submit" class="btn btn-primary">Sign Up</button>
+           
+            </form><br>
+            <a href="#" routerLink="/user/login" routerLinkActive="active">Or Log In</a>
+          </div>
+        </div>
+      </div>
+

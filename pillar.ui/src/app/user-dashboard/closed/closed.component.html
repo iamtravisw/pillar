@@ -1,0 +1,37 @@
+<h1 class="title">Solved Tickets</h1>
+
+<div *ngFor="let ticket of ticketResults">
+
+        <strong>Solved (No longer worked on):</strong>
+    <div *ngIf="ticket.subject?.length > 74 ; else FullSubject">
+            <a href="#" routerLink="/user-dashboard/ticket/{{ticket.ticketId}}">
+        <article class="message is-success">
+            <div class="message-body">
+                <strong>{{ticket.subject | slice:0:75}}...</strong> <small><strong><p class="is-pulled-right">{{ticket.user.organization}} ({{ticket.openDate | date: 'dd/MM/yyyy HH:mm'}})</p></strong></small> <br><br>
+                <div *ngIf="ticket.description?.length > 424 ; else FullDetails">
+                {{ticket.description | slice:0:425}}...
+                </div>
+                <ng-template #FullDetails>
+                {{ticket.description}}
+                </ng-template>
+                <br>
+            </div>  
+        </article>
+        </a>
+        &nbsp;
+    </div> 
+
+<ng-template #FullSubject>
+        <a href="#" routerLink="/user-dashboard/ticket/{{ticket.ticketId}}">
+    <article class="message is-success">
+        <div class="message-body">
+            <strong>{{ticket.subject}}</strong> <small><strong><p class="is-pulled-right">{{ticket.user.organization}} ({{ticket.openDate | date: 'dd/MM/yyyy HH:mm'}})</p></strong></small> <br><br>
+            {{ticket.description}}
+            <br>
+        </div>  
+    </article>
+    </a>
+    &nbsp;
+</ng-template>  
+
+</div>

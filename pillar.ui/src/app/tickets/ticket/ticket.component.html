@@ -1,0 +1,102 @@
+<article class="message is-dark">
+    <div class="message-body">
+
+        <strong>{{ticket?.subject}}</strong>
+        <small><strong>
+                <p class="is-pulled-right">{{ticket?.user.organization}}
+                    ({{ticket?.openDate | date: 'dd/MM/yyyy HH:mm'}})</p>
+            </strong></small>
+        <br><br>
+        <strong>Requester: {{ticket?.user.requester}} ({{ticket?.user.title}})</strong><br>
+        <p>{{ticket?.description}}</p><br>
+        <div *ngFor="let comment of commentResults">
+            <div class="box has-background-light">
+                <strong>{{comment?.user.requester}} <small>({{comment?.user.title}} @ {{comment?.user.organization}})
+                        <p class="is-pulled-right">{{comment?.postedDate | date: 'dd/MM/yyyy HH:mm'}}</p>
+                    </small></strong> <br><br>
+                {{comment?.message}}
+            </div>
+            &nbsp;
+        </div>
+
+        <form [formGroup]="service.ticketFormModel" autocomplete="off" (submit)="onSubmit()">
+            <div class="form-group">
+                <div class="field">
+                    <label class="label">Message</label>
+                    <div class="control">
+                        <textarea class="textarea" id="message" formControlName="message"
+                            placeholder="Type a response here..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="form-group">
+                    
+                <p class="is-pulled-left">&nbsp;</p>
+                
+                <div class="field is-pulled-left">
+                        <label class="label">Priority:</label>
+                    <div class="control">
+                        <div class="select">
+                            <select id="priority" formControlName="priority">
+                                <option value="Low">Low</option>
+                                <option value="Normal">Normal</option>
+                                <option value="High">High</option>
+                                <option value="Urgent">Urgent</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                   
+                    <p class="is-pulled-left">&nbsp;</p>
+                    
+                    <div class="field is-pulled-left">
+                            <label class="label">Type:</label>
+                        <div class="control">
+                            <div class="select">
+                                <select id="type" formControlName="type">
+                                    <option value="Question">Question</option>
+                                    <option value="Problem">Problem</option>
+                                    <option value="Task">Task</option>
+                                    <option value="Incident">Incident</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+
+                <div class="form-group">
+                    
+                        <p class="is-pulled-left">&nbsp;</p>
+                        
+                        <div class="field is-pulled-left">
+                                <label class="label">Status:</label>
+                            <div class="control">
+                                <div class="select">
+                                    <select id="status" formControlName="status">
+                                        <option value="New">New</option>
+                                        <option value="Open">Open</option>
+                                        <option value="Pending">Pending</option>
+                                        <option value="Solved">Solved</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+            
+            <button type="submit" class="button is-primary is-pulled-right">Reply</button>
+            <p class="is-pulled-right">&nbsp;</p>
+            <br><br>
+
+        </form>
+
+    </div>
+</article>
+<br>

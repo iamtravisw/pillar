@@ -1,0 +1,51 @@
+<div *ngIf="router.url === '/user-dashboard/new'; else Opened">
+    <aside class="menu">
+        <p class="menu-label">General</p>
+        <ul class="menu-list">
+            <li><a routerLink="/user-dashboard/new" class="is-active">New Ticket</a></li>
+            <li><a routerLink="/user-dashboard/opened">Opened Tickets</a></li>
+            <li><a routerLink="/user-dashboard/closed">Closed Tickets</a></li>
+        </ul>
+
+    </aside>
+</div>
+
+<ng-template #Opened>
+    <div *ngIf="router.url === '/user-dashboard/opened'; else Closed">
+        <aside class="menu">
+            <p class="menu-label">General</p>
+            <ul class="menu-list">
+                <li><a routerLink="/user-dashboard/new">New Ticket</a></li>
+                <li><a routerLink="/user-dashboard/opened" class="is-active">Opened Tickets</a></li>
+                <li><a routerLink="/user-dashboard/closed">Closed Tickets</a></li>
+            </ul>
+        </aside>
+    </div>
+</ng-template>
+
+<ng-template #Closed>
+    <div *ngIf="router.url === '/user-dashboard/closed'; else Other">
+        <aside class="menu">
+            <p class="menu-label">General</p>
+            <ul class="menu-list">
+                <li><a routerLink="/user-dashboard/new">New Ticket</a></li>
+                <li><a routerLink="/user-dashboard/opened">Opened Tickets</a></li>
+                <li><a routerLink="/user-dashboard/closed" class="is-active">Closed Tickets</a></li>
+            </ul>
+        </aside>
+    </div>
+</ng-template>
+
+<ng-template #Other>
+    <aside class="menu">
+        <p class="menu-label">General</p>
+        <ul class="menu-list">
+            <li><a routerLink="/user-dashboard/new">New Ticket</a></li>
+            <li><a routerLink="/user-dashboard/opened">Opened Tickets</a></li>
+            <li><a routerLink="/user-dashboard/closed">Closed Tickets</a></li>
+        </ul>
+    </aside>
+</ng-template>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;

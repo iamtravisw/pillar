@@ -1,0 +1,24 @@
+<div class="media-content">
+    <nav class="level">
+
+        <div routerLink="/tickets/new" class="button is-large level-item has-text-centered is-outlined is-warning" style="line-height:0px;">
+            <p class="heading has-text-dark" style="padding-top:12px;">New<br><span class="title has-text-dark">{{newCount}}</span></p>
+        </div>
+        &nbsp;
+
+        <div routerLink="/tickets/pending" class="button is-large level-item has-text-centered is-outlined is-link" style="line-height:0px;">
+            <p class="heading has-text-dark" style="padding-top:12px;">Pending<br><span class="title has-text-dark">{{pendingCount}}</span></p>
+        </div>
+        &nbsp;
+
+        <div routerLink="/tickets/open" class="button is-large level-item has-text-centered is-outlined is-danger" style="line-height:0px;">
+            <p class="heading has-text-dark" style="padding-top:12px;">Open<br><span class="title has-text-dark">{{openCount}}</span></p>
+        </div>
+        &nbsp;
+
+        <div routerLink="/tickets/solved" class="button is-large level-item has-text-centered is-outlined is-success" style="line-height:0px;">
+            <p class="heading has-text-dark" style="padding-top:12px;">Solved<br><span class="title has-text-dark">{{solvedCount}}</span></p>
+        </div>
+
+    </nav>
+</div>

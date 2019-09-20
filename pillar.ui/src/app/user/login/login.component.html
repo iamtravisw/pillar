@@ -1,0 +1,32 @@
+<div id="login">
+    <div class="login-card">
+  
+      <div class="card-title">
+        <h1>Log In</h1>
+      </div>
+  
+      <div class="content">
+        <form #form='ngForm' [formGroup]="service.loginFormModel" autocomplete="off" (submit)="onSubmit()">
+
+            <div class="form-group">
+                <label class="help is-danger" *ngIf="service.loginFormModel.get('userName').touched && service.loginFormModel.get('userName').errors?.required">The username is required</label>
+                <input class="form-control" formControlName="userName" id="email" type="text" placeholder="Username" required autofocus> 
+            </div>
+
+            <div class="form-group">
+                <label class="help is-danger" *ngIf="service.loginFormModel.get('password').touched && service.loginFormModel.get('password').errors?.required">The password is required</label>
+                <input class="form-control" formControlName="password" id="password" type="password" placeholder="Password" required>
+            </div>               
+
+
+
+              
+          <button type="submit" class="btn btn-primary"[disabled]="form.invalid">Sign In</button>
+          <label *ngIf="errorMessage === '403'"><br><br><strong class="help is-danger">Username/Password is wrong. Please try again.</strong></label>
+
+           
+        </form><br>
+        <a href="#" routerLink="/user/registration" routerLinkActive="active">Or Sign Up</a>
+      </div>
+    </div>
+  </div>

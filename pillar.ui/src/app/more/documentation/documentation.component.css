@@ -1,0 +1,26 @@
+.sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .main {
+    width: 60%;
+    height: 150vh;
+  }
+  
+  .sidebar {
+    width: 20%;
+    height: 25vh;
+  }
+  
+  body {
+    background-color: #ccc;
+    font-family: sans-serif;
+    padding: 10px;
+  }

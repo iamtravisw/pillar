@@ -1,0 +1,36 @@
+<h1 class="title">Pending Tickets</h1>
+
+<div *ngFor="let ticket of ticketResults">
+
+    <div *ngIf="ticket.subject?.length > 74 ; else FullSubject">
+            <a href="#" routerLink="/tickets/{{ticket.ticketId}}">
+        <article class="message is-link">
+            <div class="message-body">
+                <strong>{{ticket.subject | slice:0:75}}...</strong> <small><strong><p class="is-pulled-right">{{ticket.user.organization}} ({{ticket.openDate | date: 'dd/MM/yyyy HH:mm'}})</p></strong></small> <br><br>
+                <div *ngIf="ticket.description?.length > 424 ; else FullDetails">
+                {{ticket.description | slice:0:425}}...
+                </div>
+                <ng-template #FullDetails>
+                {{ticket.description}}
+                </ng-template>
+                <br>
+            </div>  
+        </article>
+        </a>
+        &nbsp;
+    </div> 
+
+<ng-template #FullSubject>
+        <a href="#" routerLink="/tickets/{{ticket.ticketId}}">
+    <article class="message is-link">
+        <div class="message-body">
+            <strong>{{ticket.subject}}</strong> <small><strong><p class="is-pulled-right">{{ticket.user.organization}} ({{ticket.openDate | date: 'dd/MM/yyyy HH:mm'}})</p></strong></small> <br><br>
+            {{ticket.description}}
+            <br>
+        </div>  
+    </article>
+    </a>
+    &nbsp;
+</ng-template>  
+
+</div>

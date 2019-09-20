@@ -1,0 +1,14 @@
+/Users/travis/Code/pillar/pillar/bin/Debug/netcoreapp2.2/pillar.deps.json
+/Users/travis/Code/pillar/pillar/bin/Debug/netcoreapp2.2/pillar.runtimeconfig.json
+/Users/travis/Code/pillar/pillar/bin/Debug/netcoreapp2.2/pillar.runtimeconfig.dev.json
+/Users/travis/Code/pillar/pillar/bin/Debug/netcoreapp2.2/pillar.dll
+/Users/travis/Code/pillar/pillar/bin/Debug/netcoreapp2.2/pillar.pdb
+/Users/travis/Code/pillar/pillar/obj/Debug/netcoreapp2.2/pillar.csprojAssemblyReference.cache
+/Users/travis/Code/pillar/pillar/obj/Debug/netcoreapp2.2/pillar.csproj.CoreCompileInputs.cache
+/Users/travis/Code/pillar/pillar/obj/Debug/netcoreapp2.2/pillar.RazorAssemblyInfo.cache
+/Users/travis/Code/pillar/pillar/obj/Debug/netcoreapp2.2/pillar.RazorAssemblyInfo.cs
+/Users/travis/Code/pillar/pillar/obj/Debug/netcoreapp2.2/pillar.AssemblyInfoInputs.cache
+/Users/travis/Code/pillar/pillar/obj/Debug/netcoreapp2.2/pillar.AssemblyInfo.cs
+/Users/travis/Code/pillar/pillar/obj/Debug/netcoreapp2.2/pillar.RazorTargetAssemblyInfo.cache
+/Users/travis/Code/pillar/pillar/obj/Debug/netcoreapp2.2/pillar.dll
+/Users/travis/Code/pillar/pillar/obj/Debug/netcoreapp2.2/pillar.pdb
