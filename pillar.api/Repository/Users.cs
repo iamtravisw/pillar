@@ -9,7 +9,7 @@ namespace pillar.Repository
 {
     public class Users
     {
-        const string connString = "Host=localhost;Username=postgres;Password=Pepper;Database=pillar";
+        const string connString = "Host=postgres;Username=postgres;Password=mysecretpassword;Database=pillar";
 
         public static string Add(pillar.User.User user, string hashedpass)
         {

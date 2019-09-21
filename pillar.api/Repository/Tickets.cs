@@ -9,7 +9,7 @@ namespace pillar.Repository
 {
     public class Tickets
     {
-        const string connString = "Host=localhost;Username=postgres;Password=Pepper;Database=pillar";
+        const string connString = "Host=postgres;Username=postgres;Password=mysecretpassword;Database=pillar";
         
         public static pillar.Ticket.Ticket Add(pillar.Ticket.Ticket ticket)
         {

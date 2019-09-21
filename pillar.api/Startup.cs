@@ -47,8 +47,8 @@ namespace pillar
                         ValidateAudience = true,
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
-                        ValidIssuer = "http://localhost:5000",
-                        ValidAudience = "http://localhost:5000",
+                        ValidIssuer = "http://0.0.0.0:5000",
+                        ValidAudience = "http://0.0.0.0:5000",
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("p!ll@r-t!ck3t-$y$t3m"))
                     };
                 });

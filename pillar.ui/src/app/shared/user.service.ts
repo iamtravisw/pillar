@@ -9,7 +9,7 @@ export class UserService {
 
   constructor(private fb:FormBuilder, private http: HttpClient) { }
 
-  readonly BaseUri = 'https://localhost:5001';
+  readonly BaseUri = 'http://localhost:5000';
 
   httpOptions = {
     headers: new HttpHeaders({

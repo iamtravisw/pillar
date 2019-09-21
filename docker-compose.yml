@@ -1,0 +1,36 @@
+version: "3.7"
+services:
+  backend:
+    image: pillar
+    build:
+      context: .
+    command: bash -c "cd pillar.api && dotnet run --no-restore --urls http://0.0.0.0:5000"
+    depends_on:
+      - postgres
+    ports:
+      - "5001:5001"
+      - "5000:5000"
+      - "44355:44355"
+      - "37125:37125"
+    networks:
+      - pillar_network
+  frontend:
+    image: pillar
+    build:
+      context: .
+    command: bash -c "cd pillar.ui && ng serve --host 0.0.0.0"
+    ports:
+      - "4200:4200"
+    networks:
+      - pillar_network
+    depends_on:
+      - backend
+  postgres:
+    image: postgres:11
+    networks:
+      - pillar_network
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+
+networks:
+  pillar_network:
