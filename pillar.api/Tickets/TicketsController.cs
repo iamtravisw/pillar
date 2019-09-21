@@ -9,7 +9,7 @@ namespace pillar.Ticket
     [Route("tickets")]
     public class TicketsController : Controller
     {
-        [HttpPost(""), Authorize]
+        [HttpPost("")]
         [Produces("application/json", Type = typeof(Ticket))]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType((int)HttpStatusCode.Forbidden)]

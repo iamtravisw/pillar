@@ -9,7 +9,7 @@ namespace pillar.Comment
     [Route("comments")]
     public class CommentsController : Controller
     {
-        [HttpPost(""), Authorize]
+        [HttpPost("")]
         [Produces("application/json", Type = typeof(Comment))]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType((int)HttpStatusCode.Forbidden)]
