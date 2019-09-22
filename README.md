@@ -34,6 +34,20 @@ Pillar is an example of a Customer Support Ticketing System provided through the
 * [User Guide](#)
 * [Questions/ Support](#)
 
+# General
+## C# .NET Core
+## Swagger
+## Postgres
+## Angular 8
+
+# Deployment
+## Docker
+
+# Setup Guide
+## Prerequisites?
+## Setup Instructions
+## Troubleshooting
+
 # User Guide
 ## What is Pillar?
 ## Creating an Account
@@ -51,8 +65,7 @@ Pillar is an example of a Customer Support Ticketing System provided through the
 ## Creating an Admin account
 ## Reporting
   
-  
-  ## Contributing
+## Contributing
 - This project is not currently accepting contributions.
 
 ## Questions/ Support
