@@ -1,5 +1,5 @@
 # pillar
-Pillar is an example of a Customer Support Ticketing System provided through the use of a RESTful API. The backend is built in C# .Net Core 2.2 and the frontend was built using Angular 8. 
+Pillar is an example of a Customer Support Ticketing System provided through the use of a RESTful API. The backend is built in C# .Net Core 2.2 and the frontend is built using Angular 8. The application has been Dockerized.
 
 ![Agent Dashboard](https://i.imgur.com/4zZrHS9.png)  
 
