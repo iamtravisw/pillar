@@ -15,7 +15,6 @@ Pillar is an example of a Customer Support Ticketing System provided through the
   * [Setup Instructions](#)
   * [Troubleshooting](#)
 * [User Guide](#)
-  * [Prerequisites](#)
   * [What is Pillar?](#)
   * [Creating an Account](#)
   * [Deleting Accounts, Tickets, or Comments](#)
