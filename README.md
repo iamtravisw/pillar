@@ -31,7 +31,7 @@ Pillar is an example of a Customer Support Ticketing System provided through the
   * [What does Type mean?](#)
   * [Creating an Admin account](#)
   * [Reporting](#)
-* [User Guide](#)
+* [Contributing](#)
 * [Questions/ Support](#)
 
 # General
@@ -45,6 +45,20 @@ Pillar is an example of a Customer Support Ticketing System provided through the
 
 # Setup Guide
 ## Prerequisites?
+In order to run Pillar locally there are three prerequisites. 
+  
+Install Node.js:  
+Download Node from https://nodejs.org/en/  
+Run the Node.js installer . 
+  
+Install .NET Core:  
+Download .NET SDK 2.2.402 (.NET Core Installer, x64) from https://dotnet.microsoft.com/download/dotnet-core/2.2 . 
+Run the .NET Core installer . 
+  
+Install Angular CLI:  
+Open the Terminal (Mac) or CMD (Windows) application on your computer.  
+Type the following command: npm install -g @angular/cli . 
+  
 ## Setup Instructions
 ## Troubleshooting
 
