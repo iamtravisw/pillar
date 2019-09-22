@@ -3,17 +3,11 @@ Pillar is an example of a Customer Support Ticketing System provided through the
 
 ![Agent Dashboard](https://i.imgur.com/4zZrHS9.png)  
 
-* [General](#)
-  * [Why build an API?](#)  
-
-* [Backend](#)
+* [General](#) 
   * [C# .NET Core](#)  
   * [Swagger](#)  
   * [Postgres](#)  
-* [Frontend](#)
   * [Angular 8](#)  
-  * [Agent Dashboard](#)  
-  * [User Dashboard](#)  
 * [Deployment](#)
   * [Docker](#)  
 * [Setup Guide](#)
@@ -37,3 +31,12 @@ Pillar is an example of a Customer Support Ticketing System provided through the
   * [What does Type mean?](#)
   * [Creating an Admin account](#)
   * [Reporting](#)
+* [User Guide](#)
+* [Questions/ Support](#)
+  
+  
+  ## Contributing
+- This project is not currently accepting contributions.
+
+## Questions/ Support
+If you have any questions or concerns about this program, please contact me.
