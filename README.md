@@ -33,6 +33,23 @@ Pillar is an example of a Customer Support Ticketing System provided through the
   * [Reporting](#)
 * [User Guide](#)
 * [Questions/ Support](#)
+
+# User Guide
+## What is Pillar?
+## Creating an Account
+## Deleting Accounts, Tickets, or Comments
+## Is my password safe?
+## Submitting a Ticket
+## Commenting on a Ticket
+## Where to find my app version?
+## Using the API, Bearer Tokens
+## What does Status mean?
+## User Dashboard
+## Agent Dashboard
+## What does Priority mean?
+## What does Type mean?
+## Creating an Admin account
+## Reporting
   
   
   ## Contributing
