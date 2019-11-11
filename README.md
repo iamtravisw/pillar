@@ -205,7 +205,7 @@ Finally, the third report is called Tickets by Table. This report will show you 
 Reports are a great way to keep an eye on your customer activity.
   
 ## Contributing
-- This project is not currently accepting contributions.
+- This project is not currently accepting contributions, but you may use code from this project for your own personal or commercial use. 
 
 ## Questions/ Support
 If you have any questions or concerns about this program, please contact me.
