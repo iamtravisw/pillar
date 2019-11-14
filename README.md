@@ -4,12 +4,13 @@ Pillar is an example of a Customer Support Ticketing System provided through the
 ![Agent Dashboard](https://i.imgur.com/4zZrHS9.png)  
 
 * [General](#) 
-  * [C# .NET Core](https://github.com/iamtravisw/pillar#C#-.NET-Core)  
-  * [Swagger](#)  
-  * [Postgres](#)  
-  * [Angular 8](#)  
-* [Deployment](#)
-  * [Docker](#)  
+  * [C# .NET Core](https://github.com/iamtravisw/pillar#c-net-core)  
+  * [Swagger](https://github.com/iamtravisw/pillar#swagger)  
+  * [Postgres](https://github.com/iamtravisw/pillar#postgres)  
+  * [Angular 8](https://github.com/iamtravisw/pillar#angular-8)  
+* [Deployment](https://github.com/iamtravisw/pillar#docker)
+  * [Docker](https://github.com/iamtravisw/pillar#docker)  
+  * [Google Cloud Platform]()
 * [Setup Guide](#)
   * [Prerequisites](#) 
   * [Setup Instructions](#)
@@ -50,8 +51,12 @@ To use Swagger with .NET Core and C# you will need [Swashbuckle](https://docs.mi
 [Angular 2+](https://angular.io/) is a platform and framework for building client applications in HTML and TypeScript. Angular is written in TypeScript. In Angular, components define views, which are sets of screen elements that Angular can choose among and modify according to your program logic and data.  
 
 # Deployment
+
 ## Docker
 [Docker](https://docs.docker.com/engine/docker-overview/) is a tool designed to make it easier to create, deploy, and run applications by using containers. Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and ship it all out as one package.  
+
+## Google Cloud Platform
+[Google Cloud Platform](http://cloud.google.com/) is a suite of public cloud computing services offered by Google. The platform includes a range of hosted services for compute, storage and application development that run on Google hardware.
 
 # Setup Guide
 ## Prerequisites?
