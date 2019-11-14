@@ -4,7 +4,7 @@ Pillar is an example of a Customer Support Ticketing System provided through the
 ![Agent Dashboard](https://i.imgur.com/4zZrHS9.png)  
 
 * [General](#) 
-  * [C# .NET Core](#)  
+  * [C# .NET Core](https://github.com/iamtravisw/pillar#C#-.NET-Core)  
   * [Swagger](#)  
   * [Postgres](#)  
   * [Angular 8](#)  
@@ -47,7 +47,7 @@ To use Swagger with .NET Core and C# you will need [Swashbuckle](https://docs.mi
 [PostgreSQL](https://www.postgresql.org/), also known as Postgres, is a free and open-source relational database management system (RDBMS) emphasizing extensibility and technical standards compliance. It is designed to handle a range of workloads, from single machines to data warehouses or Web services with many concurrent users.  
 
 ## Angular 8
-[Angular](https://angular.io/)2+ is a platform and framework for building client applications in HTML and TypeScript. Angular is written in TypeScript. In Angular, components define views, which are sets of screen elements that Angular can choose among and modify according to your program logic and data.  
+[Angular 2+](https://angular.io/) is a platform and framework for building client applications in HTML and TypeScript. Angular is written in TypeScript. In Angular, components define views, which are sets of screen elements that Angular can choose among and modify according to your program logic and data.  
 
 # Deployment
 ## Docker
