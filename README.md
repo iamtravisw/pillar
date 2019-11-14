@@ -35,13 +35,23 @@ Pillar is an example of a Customer Support Ticketing System provided through the
 * [Questions/ Support](#)
 
 # General
-## C# .NET Core
+## C# .NET Core  
+[.NET Core](https://dotnet.microsoft.com/download) is an open-source, general-purpose development platform maintained by Microsoft and the .NET community on GitHub. It's cross-platform (supporting Windows, macOS, and Linux) and can be used to build device, cloud, and IoT applications.  
+
 ## Swagger
+[OpenAPI](https://swagger.io/docs/specification/about/) Specification (formerly Swagger Specification) is an API description format for REST APIs. An OpenAPI file allows you to describe your entire API, including: Available endpoints (/users) and operations on each endpoint (GET/users, POST/users) Operation parameters Input and output for each operation.
+
+To use Swagger with .NET Core and C# you will need [Swashbuckle](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.0&tabs=visual-studio). Swashbuckle is an open source project for generating Swagger documents for Web APIs that are built with ASP.NET Core MVC. Swagger is a machine readable representation of a RESTful API that enables support for interactive documentation, client SDK generation and discoverability.  
+
 ## Postgres
+[PostgreSQL](https://www.postgresql.org/), also known as Postgres, is a free and open-source relational database management system (RDBMS) emphasizing extensibility and technical standards compliance. It is designed to handle a range of workloads, from single machines to data warehouses or Web services with many concurrent users.  
+
 ## Angular 8
+[Angular](https://angular.io/)2+ is a platform and framework for building client applications in HTML and TypeScript. Angular is written in TypeScript. In Angular, components define views, which are sets of screen elements that Angular can choose among and modify according to your program logic and data.  
 
 # Deployment
 ## Docker
+[Docker](https://docs.docker.com/engine/docker-overview/) is a tool designed to make it easier to create, deploy, and run applications by using containers. Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and ship it all out as one package.  
 
 # Setup Guide
 ## Prerequisites?
